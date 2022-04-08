@@ -20,11 +20,15 @@
     btn.style.height = '200px';
 
     // 2. append this button after the icon element
-    const web_icon = document.getElementsByClassName("navbar navbar-expand-lg navbar-light")[0]
+    const web_icon = document.getElementsByClassName("navbar navbar-expand-lg navbar-light")[0];
     web_icon.innerHTML = "";
     web_icon.appendChild(btn);
 
-    // 3. open a new page for the answer's video
+    // 3. view the text answer
+    document.getElementsByClassName("blur text-answer-heading equation")[0].className = "text-answer-heading equation";
+    document.getElementsByClassName("blurry-text")[0].style.display = "none";
+
+    // 4. open a new page for the answer's video
     btn.onclick = function () {
         window.open(document.getElementById("my-video").getAttribute('src'), "_blank");
     };
